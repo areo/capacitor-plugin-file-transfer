@@ -20,8 +20,8 @@ import okio.Okio;
 public class FileTransfer extends Plugin {
     @PluginMethod()
     public void download(PluginCall call) {
-        String srcUrl = call.getString("url");
-        String dstFile = call.getString("file");
+        String srcUrl = call.getString("source");
+        String dstFile = call.getString("target");
 
         try {
             this.downloadToFile(srcUrl, dstFile);

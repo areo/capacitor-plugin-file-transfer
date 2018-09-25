@@ -5,8 +5,8 @@ import { Plugins } from '@capacitor/core'
 
 const { FileTransfer } = Plugins
 
-async function download(url, file): Promise<void> {
-  await FileTransfer.download({ url, file })
+async function download(source: string, target: string): Promise<void> {
+  await FileTransfer.download({ source, target })
   console.log('Download complete')
 }
 

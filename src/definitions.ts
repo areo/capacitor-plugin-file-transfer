@@ -1,9 +1,9 @@
 declare global {
   interface PluginRegistry {
-    FileTransfer?: FileTransferPlugin;
+    FileTransfer?: FileTransferPlugin
   }
 }
 
 export interface FileTransferPlugin {
-  echo(options: { value: string }): Promise<{value: string}>;
+  download(options: { source: string; target: string }): Promise<void>
 }
