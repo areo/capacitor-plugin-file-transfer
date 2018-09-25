@@ -1,0 +1,47 @@
+{
+  "name": "capacitor-plugin-file-transfer",
+  "version": "0.0.1",
+  "description": "Capacitor plugin for downloading files",
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Areo AS",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/core": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.3"
+  },
+  "files": [
+    "dist/",
+    "ios/",
+    "android/",
+    "CapacitorPluginFileTransfer.podspec"
+  ],
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native"
+  ],
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/areo/capacitor-plugin-file-transfer"
+  },
+  "bugs": {
+    "url": "https://github.com/areo/capacitor-plugin-file-transfer/issues"
+  }
+}
